@@ -1,21 +1,14 @@
-# virtual environment
-myenv/
-venv/
-.env/
-*.pyc
 __pycache__/
+env/
+.venv/
+*.pyc
+static/uploads/
 
-# YOLO training folder
+# Model besar selain best.pt
+*.pt
+!models/best.pt
+
+# Folder YOLOv5 (jangan commit!)
 yolov5/
 runs/
-weights/
-*.pt
-
-# build artifacts
-*.zip
-*.rar
-*.7z
-
-# uploads
-static/uploads/*
-!static/uploads/placeholder.jpg
+results/
