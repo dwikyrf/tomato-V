@@ -8,8 +8,9 @@ import pathlib
 import glob
 import cv2
 # Set pathlib settings untuk Windows
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+import platform
+if platform.system() == 'Windows':
+    pathlib.PosixPath = pathlib.WindowsPath
 
 
 app = Flask(__name__)
