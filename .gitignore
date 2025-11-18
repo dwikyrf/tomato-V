@@ -6,7 +6,7 @@ venv/
 __pycache__/
 
 # YOLO training folder
-yolov5/
+#yolov5/
 runs/
 weights/
 *.pt

@@ -23,11 +23,12 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 # Load YOLOv5 model
 # model = torch.hub.load('ultralytics/yolov5', 'custom', path=Path('yolov5/best.pt').as_posix(), force_reload=True)
 # model.eval()
+# Load model dari folder lokal
 model = torch.hub.load(
-    'yolov5',                      # nama folder lokal repo
-    'custom',                      # type model
-    path=Path('yolov5/best.pt').as_posix(),  # path ke weight
-    source='local',                # <-- ini penting: pakai lokal, bukan GitHub
+    'yolov5',                # Nama folder di dalam repo Anda
+    'custom',
+    path='yolov5/best.pt',   # Path ke file model (pastikan file ini ada!)
+    source='local',          # WAJIB 'local'
     force_reload=True
 )
 model.eval()
